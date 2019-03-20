@@ -4,16 +4,23 @@ import { deleteCharaterById } from "../actions";
 class HerosList extends Component {
   render() {
     return (
-      <div>
-        <h2>Heros</h2>
-        <ul>
+      <div className="container">
+        <h4>Heros</h4>
+        <ul className="list-group">
           {this.props.heros.map(hero => {
             return (
-              <li key={hero.id}>
+              <li
+                className="list-group-item list-group-item-info"
+                key={hero.id}
+              >
                 {hero.name}
-                <div onClick={() => this.props.deleteCharaterById(hero.id)}>
+                <button
+                  type="button"
+                  className="btn btn-danger float-right"
+                  onClick={() => this.props.deleteCharaterById(hero.id)}
+                >
                   -
-                </div>
+                </button>
               </li>
             );
           })}
