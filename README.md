@@ -1,2 +1,2 @@
-Redux example
+# Redux example
 ![](image.gif)
